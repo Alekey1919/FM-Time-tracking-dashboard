@@ -7,7 +7,6 @@ fetch("./data.json")
   .catch((err) => console.log(err));
 
 const daily = document.getElementById("daily");
-console.log(daily.innerText);
 const weekly = document.getElementById("weekly");
 const monthly = document.getElementById("monthly");
 
@@ -30,7 +29,11 @@ const selfCareCurrent = document.getElementById("self-care-current");
 const selfCarePrevious = document.getElementById("self-care-previous");
 
 const dailySwitch = () => {
-  workCurrent.innerText = data[0].timeframes.daily.current + "hrs";
+  daily.classList.add("active");
+  weekly.classList.remove("active");
+  monthly.classList.remove("active");
+
+  workCurrent.innerText = data[0].timeframes.daily.current + " hrs";
   workPrevious.innerText =
     "Last Week -  " + data[0].timeframes.daily.previous + " hrs";
 
@@ -38,71 +41,79 @@ const dailySwitch = () => {
   playPrevious.innerText =
     "Last Week -  " + data[1].timeframes.daily.previous + " hrs";
 
-  studyCurrent.innerText = data[2].timeframes.daily.current + "hrs";
+  studyCurrent.innerText = data[2].timeframes.daily.current + " hrs";
   studyPrevious.innerText =
     "Last Week -  " + data[2].timeframes.daily.previous + " hrs";
 
-  exerciseCurrent.innerText = data[3].timeframes.daily.current + "hrs";
+  exerciseCurrent.innerText = data[3].timeframes.daily.current + " hrs";
   exercisePrevious.innerText =
     "Last Week -  " + data[3].timeframes.daily.previous + " hrs";
 
-  socialCurrent.innerText = data[4].timeframes.daily.current + "hrs";
+  socialCurrent.innerText = data[4].timeframes.daily.current + " hrs";
   socialPrevious.innerText =
     "Last Week -  " + data[4].timeframes.daily.previous + " hrs";
 
-  selfCareCurrent.innerText = data[5].timeframes.daily.current + "hrs";
+  selfCareCurrent.innerText = data[5].timeframes.daily.current + " hrs";
   selfCarePrevious.innerText =
     "Last Week -  " + data[5].timeframes.daily.previous + " hrs";
 };
 
 const weeklySwitch = () => {
-  workCurrent.innerText = data[0].timeframes.weekly.current + "hrs";
+  daily.classList.remove("active");
+  weekly.classList.add("active");
+  monthly.classList.remove("active");
+
+  workCurrent.innerText = data[0].timeframes.weekly.current + " hrs";
   workPrevious.innerText =
     "Last Week -  " + data[0].timeframes.weekly.previous + " hrs";
 
-  playCurrent.innerText = data[1].timeframes.weekly.current + "hrs";
+  playCurrent.innerText = data[1].timeframes.weekly.current + " hrs";
   playPrevious.innerText =
     "Last Week -  " + data[1].timeframes.weekly.previous + " hrs";
 
-  studyCurrent.innerText = data[2].timeframes.weekly.current + "hrs";
+  studyCurrent.innerText = data[2].timeframes.weekly.current + " hrs";
   studyPrevious.innerText =
     "Last Week -  " + data[2].timeframes.weekly.previous + " hrs";
 
-  exerciseCurrent.innerText = data[3].timeframes.weekly.current + "hrs";
+  exerciseCurrent.innerText = data[3].timeframes.weekly.current + " hrs";
   exercisePrevious.innerText =
     "Last Week -  " + data[3].timeframes.weekly.previous + " hrs";
 
-  socialCurrent.innerText = data[4].timeframes.weekly.current + "hrs";
+  socialCurrent.innerText = data[4].timeframes.weekly.current + " hrs";
   socialPrevious.innerText =
     "Last Week -  " + data[4].timeframes.weekly.previous + " hrs";
 
-  selfCareCurrent.innerText = data[5].timeframes.weekly.current + "hrs";
+  selfCareCurrent.innerText = data[5].timeframes.weekly.current + " hrs";
   selfCarePrevious.innerText =
     "Last Week -  " + data[5].timeframes.weekly.previous + " hrs";
 };
 
 const monthlySwitch = () => {
-  workCurrent.innerText = data[0].timeframes.monthly.current + "hrs";
+  daily.classList.remove("active");
+  weekly.classList.remove("active");
+  monthly.classList.add("active");
+
+  workCurrent.innerText = data[0].timeframes.monthly.current + " hrs";
   workPrevious.innerText =
     "Last Week -  " + data[0].timeframes.monthly.previous + " hrs";
 
-  playCurrent.innerText = data[1].timeframes.monthly.current + "hrs";
+  playCurrent.innerText = data[1].timeframes.monthly.current + " hrs";
   playPrevious.innerText =
     "Last Week -  " + data[1].timeframes.monthly.previous + " hrs";
 
-  studyCurrent.innerText = data[2].timeframes.monthly.current + "hrs";
+  studyCurrent.innerText = data[2].timeframes.monthly.current + " hrs";
   studyPrevious.innerText =
     "Last Week -  " + data[2].timeframes.monthly.previous + " hrs";
 
-  exerciseCurrent.innerText = data[3].timeframes.monthly.current + "hrs";
+  exerciseCurrent.innerText = data[3].timeframes.monthly.current + " hrs";
   exercisePrevious.innerText =
     "Last Week -  " + data[3].timeframes.monthly.previous + " hrs";
 
-  socialCurrent.innerText = data[4].timeframes.monthly.current + "hrs";
+  socialCurrent.innerText = data[4].timeframes.monthly.current + " hrs";
   socialPrevious.innerText =
     "Last Week -  " + data[4].timeframes.monthly.previous + " hrs";
 
-  selfCareCurrent.innerText = data[5].timeframes.monthly.current + "hrs";
+  selfCareCurrent.innerText = data[5].timeframes.monthly.current + " hrs";
   selfCarePrevious.innerText =
     "Last Week -  " + data[5].timeframes.monthly.previous + " hrs";
 };
